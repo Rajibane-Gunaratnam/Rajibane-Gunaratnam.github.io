@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nunito+Sans:wght@300&family=Oswald:wght@300&family=Playfair+Display:wght@500&display=swap");
+
+body {
+  list-style: none;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+}
+
+header {
+  overflow: hidden;
+  background: rgb(19, 18, 18);
+  color: white;
+  height: 600px;
+  margin-top: -30px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: -1px -2px 12px black;
+}
+
+h1 {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.title {
+  letter-spacing: 5px;
+}
+
+h3 {
+  letter-spacing: 3px;
+}
+
+/*////////////SECOND-BAR///////////////*/
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  top: -75px;
+  transition: ease 0.4s;
+  background: rgba(19, 18, 18, 0.918);
+}
+
+#second-bar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding-top: 10px;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: blanchedalmond;
+}
+
+/*//////////////MAIN-BAR//////////////////*/
+
+#main-bar {
+  display: flex;
+  min-width: 800px;
+  max-width: 1200px;
+  height: 400px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.image {
+  min-width: 100px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.image.active {
+  flex-grow: 100;
+  max-width: 800px;
+  margin: 0px;
+  border-radius: 7px;
+  background-size: auto 100%;
+}
+
+image:not(.active) {
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-container {
+  width: 100%;
+  height: 400px;
+  padding: 2rem;
+  visibility: hidden;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: linear-gradient(354deg, black 20%, transparent 72%);
+  color: white;
+}
+
+.text {
+  position: relative;
+  bottom: 5rem;
+  font-size: 1.2rem;
+  padding-top: 360px;
+}
+
+.active .text-container {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/*///////////////PROFIL////////////////*/
+
+article {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#PROFIL {
+  margin-bottom: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#PROFIL h2 {
+  font-size: 3rem;
+}
+
+#PROFIL p {
+  font-size: 2rem;
+}
+
+#text-profil {
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: 0.7s ease-in;
+  font-size: 2rem;
+  padding-right: 20px;
+}
+
+/*/////////////////COMPETENCES//////////////////*/
+
+#COMPETENCES {
+  height: 500px;
+  background: rgb(19, 18, 18);
+  color: white;
+  border-radius: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-shadow: -1px -1px 5px 0px black;
+}
+
+#COMPETENCES h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.competence-container {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.developpement {
+  text-align: center;
+}
+
+.developpement ul {
+  list-style: none;
+}
+
+.developpement ul li {
+  margin-top: 10px;
+}
+
+/*///////////////PROJETS///////////////////*/
+
+#PROJETS h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.projet-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-projets img {
+  max-height: 350px;
+  max-width: 350px;
+  border-radius: 50%;
+  border: 5px solid blanchedalmond;
+}
+
+.text-container-projet {
+  width: 100%;
+  height: -20px;
+  text-align: center;
+  visibility: hidden;
+  transform: translateY(75px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.text-projet {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.active-2 .text-container-projet {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/*/////////////PIED///////*/
+footer {
+  background: rgb(19, 18, 18);
+  margin-top: 200px;
+  padding-top: 10px;
+  height: 250px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+  box-shadow: -1px -1px 5px 0px black;
+}
+
+p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+p a {
+  color: blanchedalmond;
+}
+
+p a:hover {
+  color: white;
+}
+
+/*////////////MEDIA////////////////*/
+
+@media screen and (max-width: 850px) {
+  header {
+    visibility: hidden;
+    height: 0;
+  }
+
+  nav {
+    visibility: visible;
+    background: rgba(19, 18, 18, 0.918);
+  }
+
+  li {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  /*///////PROJETS//////////*/
+
+  #PROFIL {
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #PROFIL h2 {
+    font-size: 2rem;
+  }
+
+  #PROFIL p {
+    font-size: 1.5rem;
+  }
+
+  #text-profil {
+    list-style: none;
+    opacity: 1;
+    transform: translateX(0px);
+    transition: 0.7s ease-in;
+    font-size: 2rem;
+    padding-right: 20px;
+  }
+
+  /*//////////////COMPETENCE////////*/
+
+  #COMPETENCES {
+    height: 420px;
+  }
+
+  #COMPETENCES h2 {
+    font-size: 2rem;
+  }
+
+  .competence-container {
+    font-size: 1rem;
+  }
+
+  /*/////////PROJETS////////////*/
+
+  #PROJETS h2 {
+    font-size: 2rem;
+  }
+
+  .projet-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .image-projets img {
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .text-projet {
+    font-size: 0.9rem;
+  }
+
+  .active-2 .text-container-projet {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /*/////////PIED///////////*/
+
+  #CONTACT p {
+    font-size: 1.4rem;
+  }
+}
